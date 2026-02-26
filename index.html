@@ -139,12 +139,50 @@
   object-fit:contain;
 }
     }
- .media2{
+.media2{
   height: 260px;
   display:flex;
   align-items:center;
-  justify-content:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:16px 18px;
   background-color:#000;
+}
+
+.media2__text{
+  max-width: 42%;
+  color: var(--text);
+}
+
+.media2__text h3{
+  margin:0 0 8px;
+  font-size:18px;
+}
+
+.media2__text p{
+  margin:0 0 12px;
+  color: rgba(245,247,255,.75);
+  font-size:13.5px;
+  line-height:1.35;
+}
+
+.media2 img{
+  margin-left:auto;          /* pushes image to the right */
+  max-height:100%;
+  max-width: 56%;
+  object-fit:contain;
+}
+
+/* Mobile: stack text above image */
+@media (max-width: 720px){
+  .media2{
+    height:auto;
+    flex-direction:column;
+    align-items:stretch;
+  }
+  .media2__text{max-width:100%}
+  .media2 img{max-width:100%}
+}
 }
 
 .media2 img{
@@ -334,8 +372,18 @@
     <span>Support for body composition, energy, and overall wellness.</span>
   </div>
 </div>
-       <div class="media2">
-  <img src="images/hero-park.jpg" alt="Couple walking">
+      <div class="media2">
+  <div class="media2__text">
+    <h3>Feel your best—inside and out.</h3>
+    <p>
+      Whether it’s your wedding day or simply getting back to feeling like yourself again,
+      we’ll help you build a clinician-guided plan that fits your timeline and goals.
+    </p>
+    <a class="btn btn2" href="https://www.luxurymedicalgroup.com/#form">Claim Your Spot</a>
+  </div>
+
+  <img src="images/hero-park.jpg" alt="Couple walking in a park">
+</div>
 </div>
     </section>
 
