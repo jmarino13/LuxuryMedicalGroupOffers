@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Luxury Medical Group | Free Consult</title>
+  <meta name="description" content="Free consult to look and feel your best—wedding-ready or ready to feel like yourself again. GLP-1 weight loss + peptide wellness programs." />
+  <style>
+    :root{
+      --bg:#070A12;
+      --panel:rgba(255,255,255,.06);
+      --panel2:rgba(255,255,255,.09);
+      --text:#F5F7FF;
+      --muted:rgba(245,247,255,.72);
+      --line:rgba(255,255,255,.12);
+      --accent:#B89A5A;        /* adjust to Luxury Medical Group gold */
+      --accent2:#38BDF8;       /* optional highlight */
+      --radius:18px;
+      --shadow:0 22px 60px rgba(0,0,0,.45);
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 520px at 18% 0%, rgba(184,154,90,.25), transparent 55%),
+        radial-gradient(900px 520px at 90% 10%, rgba(56,189,248,.18), transparent 55%),
+        var(--bg);
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:22px}
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:14px 0;
+    }
+    .brand{display:flex; align-items:center; gap:12px; text-decoration:none}
+    .logo{
+      width:42px; height:42px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(184,154,90,.95), rgba(56,189,248,.55));
+      box-shadow:0 12px 28px rgba(0,0,0,.35);
+    }
+    .brand strong{letter-spacing:.2px}
+    .pill{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 12px; border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      border-radius:999px; color:var(--muted);
+      font-size:13px; white-space:nowrap;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 16px; border-radius:14px;
+      border:1px solid rgba(184,154,90,.45);
+      background:rgba(184,154,90,.16);
+      text-decoration:none; font-weight:650;
+      box-shadow:0 18px 44px rgba(0,0,0,.35);
+    }
+    .btn:hover{filter:brightness(1.06)}
+    .btn2{
+      border:1px solid rgba(56,189,248,.45);
+      background:rgba(56,189,248,.14);
+    }
+
+    .hero{
+      margin-top:10px;
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 920px){
+      .hero{grid-template-columns:1fr}
+      .pill{white-space:normal}
+    }
+    .card{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:calc(var(--radius) + 8px);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .heroLeft{padding:26px}
+    .kicker{
+      color:var(--muted);
+      display:flex; flex-wrap:wrap; gap:10px; align-items:center;
+      margin-bottom:14px;
+    }
+    h1{
+      margin:0 0 12px;
+      font-size: clamp(30px, 4.2vw, 52px);
+      line-height:1.04;
+      letter-spacing:-.6px;
+    }
+    .sub{
+      margin:0 0 18px;
+      color:var(--muted);
+      font-size: clamp(15px, 1.6vw, 18px);
+      line-height:1.5;
+      max-width:58ch;
+    }
+    .bullets{
+      display:grid; gap:10px; margin:18px 0 18px; padding:0;
+      list-style:none;
+    }
+    .bullets li{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:12px 12px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(0,0,0,.18);
+      border-radius:14px;
+    }
+    .dot{
+      width:10px; height:10px; margin-top:6px;
+      border-radius:999px;
+      background:var(--accent);
+      box-shadow:0 0 0 6px rgba(184,154,90,.14);
+      flex:0 0 auto;
+    }
+    .ctaRow{display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:14px}
+    .tiny{font-size:12px; color:rgba(245,247,255,.62); line-height:1.4}
+
+    .heroRight{display:flex; flex-direction:column}
+    .media{
+      position:relative;
+      height: 280px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.55)),
+        url("images/hero-bride.jpg");
+      background-size:cover;
+      background-position:center;
+      border-bottom:1px solid var(--line);
+    }
+    .media2{
+      height: 220px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.60)),
+        url("images/hero-park.jpg");
+      background-size:cover;
+      background-position:center;
+    }
+    .badge{
+      position:absolute; left:18px; bottom:18px;
+      background:rgba(7,10,18,.65);
+      border:1px solid rgba(255,255,255,.14);
+      padding:10px 12px;
+      border-radius:16px;
+      backdrop-filter: blur(10px);
+      max-width: 80%;
+    }
+    .badge strong{display:block}
+    .badge span{color:var(--muted); font-size:13px}
+
+    .section{margin-top:18px; display:grid; grid-template-columns: 1fr 1fr; gap:18px}
+    @media (max-width: 920px){ .section{grid-template-columns:1fr} }
+    .pad{padding:22px}
+    h2{margin:0 0 10px; font-size:22px}
+    .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:12px}
+    @media (max-width: 700px){ .grid3{grid-template-columns:1fr} }
+    .mini{
+      padding:14px; border-radius:16px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .mini b{display:block; margin-bottom:6px}
+    .mini p{margin:0; color:var(--muted); font-size:14px; line-height:1.45}
+
+    form{display:grid; gap:10px; margin-top:12px}
+    .row{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+    @media (max-width: 520px){ .row{grid-template-columns:1fr} }
+    label{font-size:13px; color:rgba(245,247,255,.80)}
+    input, select, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(0,0,0,.25);
+      color:var(--text);
+      outline:none;
+    }
+    textarea{min-height:92px; resize:vertical}
+    input::placeholder, textarea::placeholder{color:rgba(245,247,255,.45)}
+    .consent{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:12px; border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(0,0,0,.18);
+      color:var(--muted);
+      font-size:12.5px;
+      line-height:1.4;
+    }
+    .consent input{width:18px; height:18px; margin-top:2px}
+    .submit{
+      cursor:pointer;
+      padding:13px 14px;
+      border-radius:14px;
+      border:1px solid rgba(184,154,90,.55);
+      background: linear-gradient(135deg, rgba(184,154,90,.30), rgba(184,154,90,.12));
+      color:var(--text);
+      font-weight:750;
+    }
+    .footer{
+      margin:18px 0 8px;
+      color:rgba(245,247,255,.55);
+      font-size:12px;
+      line-height:1.45;
+    }
+    .fineprint{
+      margin-top:10px;
+      padding-top:12px;
+      border-top:1px solid rgba(255,255,255,.10);
+      color:rgba(245,247,255,.52);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <a class="brand" href="#top" aria-label="Luxury Medical Group">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <strong>Luxury Medical Group</strong><br>
+          <span class="tiny">Aesthetics • Wellness • Medical weight loss</span>
+        </div>
+      </a>
+
+      <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-end">
+        <span class="pill">✨ Limited offer: <b style="color:var(--text); font-weight:750">FREE consult</b></span>
+        <a class="btn btn2" href="#form">Claim Your Spot</a>
+        <!-- Optional call/text button -->
+        <!-- <a class="btn" href="tel:+1XXXXXXXXXX">Call/Text: (XXX) XXX-XXXX</a> -->
+      </div>
+    </div>
+
+    <section id="top" class="hero">
+      <div class="card heroLeft">
+        <div class="kicker">
+          <span class="pill">💍 Wedding-ready confidence</span>
+          <span class="pill">🌿 Feel like yourself again</span>
+          <span class="pill">📍 Concierge-style care</span>
+        </div>
+
+        <h1>Look & feel your best—starting now.</h1>
+        <p class="sub">
+          Scan-to-book special: get a <b>FREE consult</b> to build a personalized plan for
+          <b>GLP-1 medical weight loss</b>, <b>peptide-based wellness support</b>, and lifestyle guidance—so you can feel confident,
+          energized, and in control.
+        </p>
+
+        <ul class="bullets">
+          <li><span class="dot"></span><div><b>Fast, simple next step</b><div class="tiny">Tell us your goal. We’ll confirm your consult time and send your plan options.</div></div></li>
+          <li><span class="dot"></span><div><b>Clinician-guided programs</b><div class="tiny">Medication is prescribed only when clinically appropriate. Results vary by patient.</div></div></li>
+          <li><span class="dot"></span><div><b>Wedding + “feel better” tracks</b><div class="tiny">Tight timeline? We’ll prioritize what matters most for your event and your health.</div></div></li>
+        </ul>
+
+        <div class="ctaRow">
+          <a class="btn btn2" href="#form">Get My Free Consult</a>
+          <a class="btn" href="#what">See what’s included</a>
+          <span class="tiny">No obligation. Limited openings weekly.</span>
+        </div>
+
+        <div class="fineprint tiny">
+          By submitting this form, you agree to be contacted by Luxury Medical Group via call/text/email.
+          Message/data rates may apply.
+        </div>
+      </div>
+
+      <div class="card heroRight">
+        <div class="media">
+          <div class="badge">
+            <strong>Bridal glow-up + confidence</strong>
+            <span>Support for body composition, energy, and overall wellness.</span>
+          </div>
+        </div>
+        <div class="media2"></div>
+      </div>
+    </section>
+
+    <section id="what" class="section">
+      <div class="card pad">
+        <h2>Choose your goal</h2>
+        <div class="grid3">
+          <div class="mini">
+            <b>Wedding-ready</b>
+            <p>Feel confident in your dress or suit. We’ll map a timeline and a realistic plan.</p>
+          </div>
+          <div class="mini">
+            <b>Weight loss</b>
+            <p>GLP-1 options + nutrition coaching, with clinician oversight and safety checks.</p>
+          </div>
+          <div class="mini">
+            <b>Wellness support</b>
+            <p>Peptide-based wellness support may be discussed where appropriate to your goals.</p>
+          </div>
+        </div>
+
+        <div class="footer">
+          <b>What you’ll get in your free consult:</b><br>
+          • Goal review + timeline • Program options and pricing • Next steps + onboarding checklist
+        </div>
+      </div>
+
+      <div id="form" class="card pad">
+        <h2>Claim your FREE consult</h2>
+        <p class="tiny" style="margin-top:-4px">
+          Fill this out and we’ll reach out to confirm your consult (phone or virtual).
+        </p>
+
+        <!-- Replace FORM_ID with your Formspree endpoint -->
+        <form action="https://formspree.io/f/FORM_ID" method="POST">
+          <div class="row">
+            <div>
+              <label>Full name</label>
+              <input name="name" placeholder="Jane Doe" required />
+            </div>
+            <div>
+              <label>Mobile phone</label>
+              <input name="phone" placeholder="(555) 555-5555" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label>Email</label>
+              <input type="email" name="email" placeholder="you@email.com" required />
+            </div>
+            <div>
+              <label>Primary goal</label>
+              <select name="goal" required>
+                <option value="" selected disabled>Select one</option>
+                <option>Wedding-ready confidence</option>
+                <option>GLP-1 medical weight loss</option>
+                <option>Peptide-based wellness support</option>
+                <option>Energy / vitality / overall wellness</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label>Wedding date (if applicable)</label>
+              <input type="date" name="wedding_date" />
+            </div>
+            <div>
+              <label>Preferred consult</label>
+              <select name="consult_type">
+                <option>Phone</option>
+                <option>Virtual</option>
+                <option>In-person</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label>Anything you want us to know?</label>
+            <textarea name="notes" placeholder="Example: My wedding is in 10 weeks. I want to lose 15–20 lbs and improve energy."></textarea>
+          </div>
+
+          <div class="consent">
+            <input type="checkbox" name="consent" required />
+            <div>
+              I agree to be contacted by Luxury Medical Group. I understand this form is not medical advice
+              and does not create a provider-patient relationship.
+            </div>
+          </div>
+
+          <button class="submit" type="submit">Request My Free Consult</button>
+
+          <div class="footer">
+            <b>Safety note:</b> All medications and therapies are discussed and provided only when clinically appropriate.
+            Individual results vary.
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div><b>Luxury Medical Group</b> • Medical weight loss • Wellness • Aesthetics</div>
+      <div class="fineprint">
+        This page is for informational purposes only and is not a substitute for professional medical advice.
+        If you believe you are experiencing a medical emergency, call 911.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
