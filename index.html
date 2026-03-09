@@ -3,337 +3,408 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Luxury Medical Group | Wedding Free Consult</title>
 
 <style>
-
 :root{
---bg:#070A12;
---panel:rgba(255,255,255,.06);
---text:#f5f7ff;
---line:rgba(255,255,255,.12);
---gold:#B89A5A;
+  --bg:#070A12;
+  --panel:rgba(255,255,255,.06);
+  --text:#f5f7ff;
+  --line:rgba(255,255,255,.12);
+  --gold:#B89A5A;
 }
 
+*{box-sizing:border-box}
+
 body{
-margin:0;
-font-family:system-ui, -apple-system, Segoe UI, Roboto;
-background:var(--bg);
-color:var(--text);
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:
+    radial-gradient(900px 520px at 18% 0%, rgba(184,154,90,.18), transparent 55%),
+    radial-gradient(900px 520px at 90% 10%, rgba(56,189,248,.10), transparent 55%),
+    var(--bg);
+  color:var(--text);
 }
 
 .wrap{
-max-width:1100px;
-margin:auto;
-padding:22px;
+  max-width:1100px;
+  margin:auto;
+  padding:20px 22px 28px;
 }
 
 .nav{
-display:flex;
-align-items:center;
-justify-content:space-between;
-margin-bottom:18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:14px;
+  flex-wrap:wrap;
 }
 
 .logo-img{
-height:42px;
+  height:52px;
+  width:auto;
+  object-fit:contain;
+  display:block;
 }
 
 .btn{
-display:inline-block;
-padding:14px 20px;
-border-radius:14px;
-border:1px solid rgba(184,154,90,.45);
-background:rgba(184,154,90,.14);
-text-decoration:none;
-color:white;
-font-weight:700;
+  display:inline-block;
+  padding:14px 22px;
+  border-radius:14px;
+  border:1px solid rgba(184,154,90,.45);
+  background:rgba(184,154,90,.14);
+  text-decoration:none;
+  color:#fff;
+  font-weight:700;
+  transition:background .18s ease, transform .18s ease;
+}
+
+.btn:hover{
+  background:rgba(184,154,90,.25);
+  transform:translateY(-1px);
 }
 
 .hero{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:18px;
-align-items:start;
-margin-bottom:10px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  align-items:start;
+  margin-bottom:10px;
 }
 
 .hero-left{
-padding:18px;
+  padding:10px 6px 0 0;
 }
 
 h1{
-font-size:44px;
-margin-bottom:10px;
+  font-size:44px;
+  line-height:1.08;
+  margin:0 0 10px;
 }
 
 .free-offer{
-font-size:60px;
-font-weight:900;
-background:linear-gradient(135deg,#B89A5A,#FFD700);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-margin:6px 0 14px;
+  display:inline-block;
+  font-size:60px;
+  font-weight:900;
+  line-height:1;
+  background:linear-gradient(135deg,#B89A5A,#FFD700);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin:4px 0 14px;
+  text-transform:uppercase;
+  letter-spacing:1px;
 }
 
 .hero p{
-font-size:18px;
-line-height:1.5;
-color:rgba(245,247,255,.8);
+  font-size:18px;
+  line-height:1.55;
+  color:rgba(245,247,255,.82);
+  margin:0;
+  max-width:560px;
 }
 
 .hero-img img{
-width:100%;
-max-height:360px;
-object-fit:cover;
-border-radius:18px;
-display:block;
+  width:100%;
+  max-height:380px;
+  object-fit:cover;
+  object-position:center;
+  border-radius:18px;
+  display:block;
 }
 
 .media-caption{
-background:rgba(255,255,255,.05);
-border:1px solid var(--line);
-border-radius:16px;
-padding:16px;
-margin-top:12px;
+  background:rgba(255,255,255,.05);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:16px;
+  margin-top:12px;
+}
+
+.media-caption strong{
+  display:block;
+  font-size:18px;
+  margin-bottom:6px;
+}
+
+.media-caption p{
+  margin:0;
+  font-size:15px;
+  line-height:1.5;
+  color:rgba(245,247,255,.78);
 }
 
 .quiz-flow{
-margin-top:10px;
-background:var(--panel);
-border:1px solid var(--line);
-border-radius:18px;
-padding:32px;
+  margin-top:10px;
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:28px;
 }
 
 .quiz-box{
-max-width:720px;
-margin:auto;
-text-align:center;
+  max-width:760px;
+  margin:auto;
+  text-align:center;
+}
+
+.quiz-progress-wrap{
+  margin:0 auto 24px;
+  max-width:520px;
+  text-align:left;
+}
+
+.quiz-progress-text{
+  font-size:14px;
+  font-weight:700;
+  color:rgba(245,247,255,.78);
+  margin-bottom:8px;
+}
+
+.quiz-progress-bar{
+  width:100%;
+  height:10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.10);
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.quiz-progress-fill{
+  height:100%;
+  width:25%;
+  border-radius:999px;
+  background:linear-gradient(135deg,#B89A5A,#FFD700);
+  transition:width .3s ease;
 }
 
 .quiz-step{
-display:none;
+  display:none;
+  animation:fadeSlide .3s ease;
 }
 
 .quiz-step.active{
-display:block;
+  display:block;
 }
 
 .quiz-step h2{
-font-size:34px;
-margin-bottom:20px;
+  font-size:34px;
+  line-height:1.2;
+  margin:0 0 20px;
 }
 
 .quiz-actions{
-display:flex;
-gap:14px;
-justify-content:center;
-flex-wrap:wrap;
+  display:flex;
+  gap:14px;
+  justify-content:center;
+  flex-wrap:wrap;
 }
 
 .quiz-btn{
-padding:16px 24px;
-border-radius:14px;
-border:1px solid rgba(184,154,90,.45);
-background:rgba(184,154,90,.15);
-color:white;
-font-size:18px;
-cursor:pointer;
-font-weight:700;
+  padding:16px 24px;
+  border-radius:14px;
+  border:1px solid rgba(184,154,90,.45);
+  background:rgba(184,154,90,.15);
+  color:#fff;
+  font-size:18px;
+  cursor:pointer;
+  font-weight:700;
+  transition:background .18s ease, transform .18s ease;
 }
 
 .quiz-btn:hover{
-background:rgba(184,154,90,.25);
+  background:rgba(184,154,90,.25);
+  transform:translateY(-1px);
 }
 
 .quiz-result p{
-max-width:640px;
-margin:auto;
-font-size:18px;
-margin-bottom:18px;
+  max-width:640px;
+  margin:0 auto 18px;
+  font-size:18px;
+  line-height:1.5;
+  color:rgba(245,247,255,.82);
 }
 
 .large-cta{
-font-size:20px;
-padding:18px 28px;
+  font-size:20px;
+  padding:18px 28px;
 }
 
 .tiny{
-font-size:13px;
-opacity:.7;
-margin-top:10px;
+  font-size:13px;
+  opacity:.75;
+  margin-top:10px;
 }
 
-@media(max-width:900px){
-
-.hero{
-grid-template-columns:1fr;
+@keyframes fadeSlide{
+  from{
+    opacity:0;
+    transform:translateY(8px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 
-h1{
-font-size:36px;
-}
+@media (max-width:900px){
+  .hero{
+    grid-template-columns:1fr;
+  }
 
-.free-offer{
-font-size:46px;
-}
+  h1{
+    font-size:36px;
+  }
 
-.quiz-step h2{
-font-size:28px;
-}
+  .free-offer{
+    font-size:46px;
+  }
 
-}
+  .hero-img img{
+    max-height:320px;
+  }
 
+  .quiz-step h2{
+    font-size:28px;
+  }
+
+  .wrap{
+    padding:18px 16px 26px;
+  }
+
+  .quiz-flow{
+    padding:22px 16px;
+  }
+}
 </style>
 </head>
 
-
 <body>
+  <div class="wrap">
 
-<div class="wrap">
+    <div class="nav">
+      <img src="images/logo.png" class="logo-img" alt="Luxury Medical Group logo">
 
-<div class="nav">
+      <a class="btn" href="https://www.luxurymedicalgroup.com/#form">
+        Claim Your Spot
+      </a>
+    </div>
 
-<img src="images/logo.png" class="logo-img">
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Look &amp; feel your best for your big day</h1>
 
-<a class="btn" href="https://www.luxurymedicalgroup.com/#form">
-Claim Your Spot
-</a>
+        <div class="free-offer">FREE CONSULT</div>
 
-</div>
+        <p>
+          Luxury Medical Group offers personalized wellness and medical weight-loss
+          programs designed to help you feel confident, energized, and camera-ready
+          for your wedding.
+        </p>
+      </div>
 
+      <div class="hero-img">
+        <img src="images/hero-bride.jpg" alt="Bride smiling in wedding dress">
 
-<section class="hero">
+        <div class="media-caption">
+          <strong>Wedding-Day Ready</strong>
+          <p>
+            Your free consult is the first step toward feeling confident, energized,
+            and looking incredible on your big day.
+          </p>
+        </div>
+      </div>
+    </section>
 
-<div class="hero-left">
+    <section class="quiz-flow">
+      <div class="quiz-box">
 
-<h1>Look & feel your best for your big day</h1>
+        <div class="quiz-progress-wrap">
+          <div class="quiz-progress-text">Step <span id="stepCurrent">1</span> of 4</div>
+          <div class="quiz-progress-bar">
+            <div class="quiz-progress-fill" id="quizProgressFill"></div>
+          </div>
+        </div>
 
-<div class="free-offer">FREE CONSULT</div>
+        <div class="quiz-step active" data-step="1">
+          <h2>Are you ready for your big day?</h2>
 
-<p>
-Luxury Medical Group offers personalized wellness and medical weight-loss programs
-designed to help you feel confident, energized, and camera-ready for your wedding.
-</p>
+          <div class="quiz-actions">
+            <button class="quiz-btn" onclick="nextStep(2)">Yes</button>
+            <button class="quiz-btn" onclick="nextStep(2)">Getting Close</button>
+          </div>
+        </div>
 
-</div>
+        <div class="quiz-step" data-step="2">
+          <h2>Still need to lose 5 lbs or maybe one dress size before your wedding?</h2>
 
-<div class="hero-img">
+          <div class="quiz-actions">
+            <button class="quiz-btn" onclick="nextStep(3)">Yes</button>
+            <button class="quiz-btn" onclick="nextStep(3)">Absolutely</button>
+          </div>
+        </div>
 
-<img src="images/hero-bride.jpg" alt="Bride">
+        <div class="quiz-step" data-step="3">
+          <h2>Feeling too fatigued to even think about your day, much less plan it?</h2>
 
-<div class="media-caption">
+          <div class="quiz-actions">
+            <button class="quiz-btn" onclick="nextStep(4)">Yes</button>
+            <button class="quiz-btn" onclick="nextStep(4)">Sometimes</button>
+          </div>
+        </div>
 
-<strong>Wedding-Day Ready</strong>
+        <div class="quiz-step" data-step="4">
+          <h2>Are you ready to feel good and look good?</h2>
 
-<p>
-Your free consult is the first step toward feeling confident, energized,
-and looking incredible on your big day.
-</p>
+          <div class="quiz-actions">
+            <button class="quiz-btn" onclick="nextStep(5)">Yes</button>
+            <button class="quiz-btn" onclick="nextStep(5)">I’m Ready</button>
+          </div>
+        </div>
 
-</div>
+        <div class="quiz-step quiz-result" data-step="5">
+          <h2>You’re one step away from your <span style="color:#f4cc3f;">FREE CONSULT</span></h2>
 
-</div>
+          <p>
+            Click below to learn how Luxury Medical Group can help support your
+            wellness, energy, and weight-loss goals before your wedding day.
+          </p>
 
-</section>
+          <a class="btn large-cta" href="https://www.luxurymedicalgroup.com/#form">
+            Click Here Now to Book Your Free Consult
+          </a>
 
+          <div class="tiny">Takes less than 30 seconds to book.</div>
+        </div>
 
-<section class="quiz-flow">
+      </div>
+    </section>
 
-<div class="quiz-box">
-
-<div class="quiz-step active" data-step="1">
-
-<h2>Is your wedding day coming soon?</h2>
-
-<div class="quiz-actions">
-<button class="quiz-btn" onclick="nextStep(2)">Yes</button>
-<button class="quiz-btn" onclick="nextStep(2)">Getting Close</button>
-</div>
-
-</div>
-
-
-<div class="quiz-step" data-step="2">
-
-<h2>Would you love to lose 5 lbs or drop a dress size?</h2>
-
-<div class="quiz-actions">
-<button class="quiz-btn" onclick="nextStep(3)">Yes</button>
-<button class="quiz-btn" onclick="nextStep(3)">Absolutely</button>
-</div>
-
-</div>
-
-
-<div class="quiz-step" data-step="3">
-
-<h2>Are you feeling too fatigued to fully enjoy planning your wedding?</h2>
-
-<div class="quiz-actions">
-<button class="quiz-btn" onclick="nextStep(4)">Yes</button>
-<button class="quiz-btn" onclick="nextStep(4)">Sometimes</button>
-</div>
-
-</div>
-
-
-<div class="quiz-step" data-step="4">
-
-<h2>Are you ready to feel good and look incredible for your big day?</h2>
-
-<div class="quiz-actions">
-<button class="quiz-btn" onclick="nextStep(5)">Yes</button>
-<button class="quiz-btn" onclick="nextStep(5)">I’m Ready</button>
-</div>
-
-</div>
-
-
-<div class="quiz-step quiz-result" data-step="5">
-
-<h2>You may be a great fit for a <span style="color:#f4cc3f">FREE CONSULT</span></h2>
-
-<p>
-Learn how Luxury Medical Group can help support your weight-loss,
-energy, and wellness goals before your wedding day.
-</p>
-
-<a class="btn large-cta" href="https://www.luxurymedicalgroup.com/#form">
-Click Here to Book Your Free Consult
-</a>
-
-<div class="tiny">
-Takes less than 30 seconds to book.
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-</div>
-
+  </div>
 
 <script>
-
 function nextStep(stepNumber){
+  const steps = document.querySelectorAll('.quiz-step');
+  steps.forEach(step => {
+    step.classList.remove('active');
+  });
 
-const steps=document.querySelectorAll('.quiz-step');
+  const next = document.querySelector('[data-step="' + stepNumber + '"]');
+  if(next){
+    next.classList.add('active');
+  }
 
-steps.forEach(step=>{
-step.classList.remove('active');
-});
+  const stepCurrent = document.getElementById('stepCurrent');
+  const progressFill = document.getElementById('quizProgressFill');
 
-document.querySelector('[data-step="'+stepNumber+'"]').classList.add('active');
-
+  if(stepNumber <= 4){
+    stepCurrent.textContent = stepNumber;
+    progressFill.style.width = (stepNumber * 25) + '%';
+  } else {
+    stepCurrent.textContent = 4;
+    progressFill.style.width = '100%';
+  }
 }
-
 </script>
-
-
 </body>
 </html>
