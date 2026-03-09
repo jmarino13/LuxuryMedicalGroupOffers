@@ -1,483 +1,335 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Luxury Medical Group | Free Consult</title>
-  <meta name="description" content="Free consult to look and feel your best—wedding-ready or ready to feel like yourself again. GLP-1 weight loss + peptide wellness programs." />
-  <style>
-    :root{
-      --bg:#070A12;
-      --panel:rgba(255,255,255,.06);
-      --panel2:rgba(255,255,255,.09);
-      --text:#F5F7FF;
-      --muted:rgba(245,247,255,.72);
-      --line:rgba(255,255,255,.12);
-      --accent:#B89A5A;        /* adjust to Luxury Medical Group gold */
-      --accent2:#38BDF8;       /* optional highlight */
-      --radius:18px;
-      --shadow:0 22px 60px rgba(0,0,0,.45);
-      --max:1120px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(900px 520px at 18% 0%, rgba(184,154,90,.25), transparent 55%),
-        radial-gradient(900px 520px at 90% 10%, rgba(56,189,248,.18), transparent 55%),
-        var(--bg);
-    }
-    a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:22px}
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:14px; padding:14px 0;
-    }
-    .brand{display:flex; align-items:center; gap:12px; text-decoration:none}
-    .logo{
-      width:42px; height:42px; border-radius:12px;
-      background: linear-gradient(135deg, rgba(184,154,90,.95), rgba(56,189,248,.55));
-      box-shadow:0 12px 28px rgba(0,0,0,.35);
-    }
-    .brand strong{letter-spacing:.2px}
-    .pill{
-      display:inline-flex; align-items:center; gap:10px;
-      padding:10px 12px; border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      border-radius:999px; color:var(--muted);
-      font-size:13px; white-space:nowrap;
-    }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:12px 16px; border-radius:14px;
-      border:1px solid rgba(184,154,90,.45);
-      background:rgba(184,154,90,.16);
-      text-decoration:none; font-weight:650;
-      box-shadow:0 18px 44px rgba(0,0,0,.35);
-    }
-    .btn:hover{filter:brightness(1.06)}
-    .btn2{
-      border:1px solid rgba(56,189,248,.45);
-      background:rgba(56,189,248,.14);
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .hero{
-      margin-top:10px;
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap:18px;
-      align-items:stretch;
-    }
-    @media (max-width: 920px){
-      .hero{grid-template-columns:1fr}
-      .pill{white-space:normal}
-    }
-    .card{
-      background:var(--panel);
-      border:1px solid var(--line);
-      border-radius:calc(var(--radius) + 8px);
-      box-shadow:var(--shadow);
-      overflow:hidden;
-    }
-    .heroLeft{padding:26px}
-    .kicker{
-      color:var(--muted);
-      display:flex; flex-wrap:wrap; gap:10px; align-items:center;
-      margin-bottom:14px;
-    }
-    h1{
-      margin:0 0 12px;
-      font-size: clamp(30px, 4.2vw, 52px);
-      line-height:1.04;
-      letter-spacing:-.6px;
-    }
-    .sub{
-      margin:0 0 18px;
-      color:var(--muted);
-      font-size: clamp(15px, 1.6vw, 18px);
-      line-height:1.5;
-      max-width:58ch;
-    }
-    .bullets{
-      display:grid; gap:10px; margin:18px 0 18px; padding:0;
-      list-style:none;
-    }
-    .bullets li{
-      display:flex; gap:10px; align-items:flex-start;
-      padding:12px 12px;
-      border:1px solid rgba(255,255,255,.10);
-      background:rgba(0,0,0,.18);
-      border-radius:14px;
-    }
-    .dot{
-      width:10px; height:10px; margin-top:6px;
-      border-radius:999px;
-      background:var(--accent);
-      box-shadow:0 0 0 6px rgba(184,154,90,.14);
-      flex:0 0 auto;
-    }
-    .ctaRow{display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:14px}
-    .tiny{font-size:12px; color:rgba(245,247,255,.62); line-height:1.4}
+<title>Luxury Medical Group | Wedding Free Consult</title>
 
-    .heroRight{display:flex; flex-direction:column}
-  .media{
-  position:relative;
-  height: 320px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background-color:#000;
-  border-bottom:1px solid var(--line);
+<style>
+
+:root{
+--bg:#070A12;
+--panel:rgba(255,255,255,.06);
+--text:#f5f7ff;
+--line:rgba(255,255,255,.12);
+--gold:#B89A5A;
 }
 
-.media img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position: center top;
-}
-    }
-.media2{
-  height: 260px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-  padding:16px 18px;
-  background-color:#000;
+body{
+margin:0;
+font-family:system-ui, -apple-system, Segoe UI, Roboto;
+background:var(--bg);
+color:var(--text);
 }
 
-.media2__text{
-  max-width: 42%;
-  color: var(--text);
+.wrap{
+max-width:1100px;
+margin:auto;
+padding:22px;
 }
 
-.media2__text h3{
-  margin:0 0 8px;
-  font-size:18px;
+.nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-bottom:18px;
 }
 
-.media2__text p{
-  margin:0 0 12px;
-  color: rgba(245,247,255,.75);
-  font-size:13.5px;
-  line-height:1.35;
+.logo-img{
+height:42px;
 }
 
-.media2 img{
-  margin-left:auto;          /* pushes image to the right */
-  max-height:100%;
-  max-width: 56%;
-  object-fit:contain;
-}
-.media-caption{
-  background: rgba(255,255,255,.05);
-  border: 1px solid rgba(255,255,255,.12);
-  border-top: 2px solid rgba(184,154,90,.75);
-  border-radius: 18px;
-  padding: 16px 18px;
-  margin-top: -60px;   /* pulls it into the fade */
-  color: var(--text);
-  text-align:right;
-  backdrop-filter: blur(10px);
-  position:relative;
-  z-index:2;
-}
-.media-caption::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:2px;
-  background: linear-gradient(
-    to right,
-    rgba(184,154,90,0),
-    rgba(184,154,90,.9),
-    rgba(255,215,0,.7),
-    rgba(184,154,90,.9),
-    rgba(184,154,90,0)
-  );
-}
-.media-caption strong{
-  display:block;
-  font-size:18px;
-  margin-bottom:6px;
-}
-
-.media-caption p{
-  margin:0;
-  font-size:14px;
-  color: rgba(245,247,255,.75);
-  line-height:1.4;
-}
-/* Mobile: stack text above image */
-@media (max-width: 720px){
-  .media2{
-    height:auto;
-    flex-direction:column;
-    align-items:stretch;
-  }
-  .media2__text{max-width:100%}
-  .media2 img{max-width:100%}
-}
-}
-
-.media2 img{
-  max-height:100%;
-  max-width:100%;
-  object-fit:contain;
-}
-    }
-    .badge{
-      position:absolute; left:18px; bottom:18px;
-      background:rgba(7,10,18,.65);
-      border:1px solid rgba(255,255,255,.14);
-      padding:10px 12px;
-      border-radius:16px;
-      backdrop-filter: blur(10px);
-      max-width: 80%;
-    }
-    .badge strong{display:block}
-    .badge span{color:var(--muted); font-size:13px}
-
-    .section{margin-top:18px; display:grid; grid-template-columns: 1fr 1fr; gap:18px}
-    @media (max-width: 920px){ .section{grid-template-columns:1fr} }
-    .pad{padding:22px}
-    h2{margin:0 0 10px; font-size:22px}
-    .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:12px}
-    @media (max-width: 700px){ .grid3{grid-template-columns:1fr} }
-    .mini{
-      padding:14px; border-radius:16px;
-      background:rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.10);
-    }
-    .mini b{display:block; margin-bottom:6px}
-    .mini p{margin:0; color:var(--muted); font-size:14px; line-height:1.45}
-
-    form{display:grid; gap:10px; margin-top:12px}
-    .row{display:grid; grid-template-columns:1fr 1fr; gap:10px}
-    @media (max-width: 520px){ .row{grid-template-columns:1fr} }
-    label{font-size:13px; color:rgba(245,247,255,.80)}
-    input, select, textarea{
-      width:100%;
-      padding:12px 12px;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(0,0,0,.25);
-      color:var(--text);
-      outline:none;
-    }
-    textarea{min-height:92px; resize:vertical}
-    input::placeholder, textarea::placeholder{color:rgba(245,247,255,.45)}
-    .consent{
-      display:flex; gap:10px; align-items:flex-start;
-      padding:12px; border-radius:14px;
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(0,0,0,.18);
-      color:var(--muted);
-      font-size:12.5px;
-      line-height:1.4;
-    }
-    .consent input{width:18px; height:18px; margin-top:2px}
-    .submit{
-      cursor:pointer;
-      padding:13px 14px;
-      border-radius:14px;
-      border:1px solid rgba(184,154,90,.55);
-      background: linear-gradient(135deg, rgba(184,154,90,.30), rgba(184,154,90,.12));
-      color:var(--text);
-      font-weight:750;
-    }
-    .footer{
-      margin:18px 0 8px;
-      color:rgba(245,247,255,.55);
-      font-size:12px;
-      line-height:1.45;
-    }
-    .fineprint{
-      margin-top:10px;
-      padding-top:12px;
-      border-top:1px solid rgba(255,255,255,.10);
-      color:rgba(245,247,255,.52);
-    }
-    .logo-img{
-  height:42px;
-  width:auto;
-  object-fit:contain;
-}
-    .free-offer{
-  font-size: clamp(36px, 6vw, 68px);
-  font-weight: 900;
-  letter-spacing:2px;
-  background: linear-gradient(135deg,#B89A5A,#FFD700);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  margin:10px 0 6px;
-  text-transform:uppercase;
-      text-decoration:none;
+.btn{
 display:inline-block;
+padding:14px 20px;
+border-radius:14px;
+border:1px solid rgba(184,154,90,.45);
+background:rgba(184,154,90,.14);
+text-decoration:none;
+color:white;
+font-weight:700;
 }
 
-.media{
-  position:relative;
-  height: 560px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background-color:#000;
-  border-bottom:1px solid var(--line);
-}
-.media::after{
-  content:"";
-  position:absolute;
-  bottom:0;
-  left:0;
-  width:100%;
-  height:120px;
-  background: linear-gradient(
-    to bottom,
-    rgba(7,10,18,0) 0%,
-    rgba(7,10,18,.7) 60%,
-    rgba(7,10,18,1) 100%
-  );
-  pointer-events:none;
-}
-.media img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position: center top;
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:22px;
+align-items:center;
 }
 
-.media2{
-  height: 260px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background-color:#000;
+.hero-left{
+padding:18px;
 }
 
-.media2 img{
-  max-height:100%;
-  max-width:100%;
-  object-fit:contain;
+h1{
+font-size:44px;
+margin-bottom:10px;
 }
-  </style>
+
+.free-offer{
+font-size:60px;
+font-weight:900;
+background:linear-gradient(135deg,#B89A5A,#FFD700);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin:6px 0 14px;
+}
+
+.hero p{
+font-size:18px;
+line-height:1.5;
+color:rgba(245,247,255,.8);
+}
+
+.hero-img img{
+width:100%;
+border-radius:18px;
+}
+
+.media-caption{
+background:rgba(255,255,255,.05);
+border:1px solid var(--line);
+border-radius:16px;
+padding:16px;
+margin-top:12px;
+}
+
+.quiz-flow{
+margin-top:40px;
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:18px;
+padding:32px;
+}
+
+.quiz-box{
+max-width:720px;
+margin:auto;
+text-align:center;
+}
+
+.quiz-step{
+display:none;
+}
+
+.quiz-step.active{
+display:block;
+}
+
+.quiz-step h2{
+font-size:34px;
+margin-bottom:20px;
+}
+
+.quiz-actions{
+display:flex;
+gap:14px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.quiz-btn{
+padding:16px 24px;
+border-radius:14px;
+border:1px solid rgba(184,154,90,.45);
+background:rgba(184,154,90,.15);
+color:white;
+font-size:18px;
+cursor:pointer;
+font-weight:700;
+}
+
+.quiz-btn:hover{
+background:rgba(184,154,90,.25);
+}
+
+.quiz-result p{
+max-width:640px;
+margin:auto;
+font-size:18px;
+margin-bottom:18px;
+}
+
+.large-cta{
+font-size:20px;
+padding:18px 28px;
+}
+
+.tiny{
+font-size:13px;
+opacity:.7;
+margin-top:10px;
+}
+
+@media(max-width:900px){
+
+.hero{
+grid-template-columns:1fr;
+}
+
+h1{
+font-size:36px;
+}
+
+.free-offer{
+font-size:46px;
+}
+
+.quiz-step h2{
+font-size:28px;
+}
+
+}
+
+</style>
 </head>
 
+
 <body>
-  <div class="wrap">
-    <div class="nav">
-      <a class="brand" href="#top" aria-label="Luxury Medical Group">
-        <img src="images/logo.png" class="logo-img" alt="Luxury Medical Group logo">
-        <div>
-          <strong>Luxury Medical Group</strong><br>
-          <span class="tiny">Peptides • GLP 1,2,3 • Medical weight loss</span>
-        </div>
-      </a>
 
-      <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-end">
-        <span class="pill">✨ Limited offer: <b style="color:var(--text); font-weight:750">FREE consult</b></span>
-        <a class="btn btn2" href="https://www.luxurymedicalgroup.com/#form">Claim Your Spot</a>
-        <!-- Optional call/text button -->
-        <!-- <a class="btn" href="tel:+17208079550">Call/Text: (720) 807-9550</a> -->
-      </div>
-    </div>
+<div class="wrap">
 
-    <section id="top" class="hero">
-      <div class="card heroLeft">
-        <div class="kicker">
-          <span class="pill">💍 Wedding-ready confidence</span>
-          <span class="pill">🌿 Countdown Plan</span>
-          <span class="pill">📍 Concierge-style care</span>
-        
-        </div>
+<div class="nav">
 
-        <h1>Look & feel your best on your big day — Start Now!</h1>
-        <a class="free-offer" href="https://www.luxurymedicalgroup.com/#form">FREE CONSULT</a>
-        <p class="sub">
-          Scan-to-book special: get a <b>FREE consult</b> to build a personalized plan for
-          <b>GLP-1 medical weight loss</b>, <b>peptide-based wellness support</b>, and lifestyle guidance—so you can feel confident,
-          energized, and in control.
-        </p>
+<img src="images/logo.png" class="logo-img">
 
-        <ul class="bullets">
-          <li><span class="dot"></span><div><b>Fast, simple next step</b><div class="tiny">Tell us your goal. We’ll confirm your consult time and send your plan options.</div></div></li>
-          <li><span class="dot"></span><div><b>Clinician-guided programs</b><div class="tiny">Medication is prescribed only when clinically appropriate. Results vary by patient.</div></div></li>
-          <li><span class="dot"></span><div><b>Wedding + “feel better” tracks</b><div class="tiny">Tight timeline? We’ll prioritize what matters most for your event and your health.</div></div></li>
-        </ul>
+<a class="btn" href="https://www.luxurymedicalgroup.com/#form">
+Claim Your Spot
+</a>
 
-        <div class="ctaRow">
-          <a class="btn btn2" href="https://www.luxurymedicalgroup.com/#form">Claim Your Spot</a>
-          <a class="btn" href="#what">See what’s included</a>
-          <span class="tiny">No obligation. Limited openings weekly.</span>
-        </div>
-
-        <div class="fineprint tiny">
-          By submitting this form, you agree to be contacted by Luxury Medical Group via call/text/email.
-          Message/data rates may apply.
-        </div>
-      </div>
-
-      <div class="card heroRight">
-      <div class="media">
-  <img src="images/hero-bride.jpg" alt="Bride">
 </div>
+
+
+<section class="hero">
+
+<div class="hero-left">
+
+<h1>Look & feel your best for your big day</h1>
+
+<div class="free-offer">FREE CONSULT</div>
+
+<p>
+Luxury Medical Group offers personalized wellness and medical weight-loss programs
+designed to help you feel confident, energized, and camera-ready for your wedding.
+</p>
+
+</div>
+
+<div class="hero-img">
+
+<img src="images/hero-bride.jpg" alt="Bride">
 
 <div class="media-caption">
-  <strong>Wedding-Day Ready</strong>
-  <p>Your free consult is the first step to feeling confident, energized, and camera-ready.</p>
+
+<strong>Wedding-Day Ready</strong>
+
+<p>
+Your free consult is the first step toward feeling confident, energized,
+and looking incredible on your big day.
+</p>
+
 </div>
+
 </div>
-     
+
+</section>
+
+
+<section class="quiz-flow">
+
+<div class="quiz-box">
+
+<div class="quiz-step active" data-step="1">
+
+<h2>Is your wedding day coming soon?</h2>
+
+<div class="quiz-actions">
+<button class="quiz-btn" onclick="nextStep(2)">Yes</button>
+<button class="quiz-btn" onclick="nextStep(2)">Getting Close</button>
 </div>
-    </section>
 
-    <section id="what" class="section">
-      <div class="card pad">
-        <h2>Choose your goal</h2>
-        <div class="grid3">
-          <div class="mini">
-            <b>Wedding-ready</b>
-            <p>Feel confident in your dress or suit. We’ll map a timeline and a realistic plan.</p>
-          </div>
-          <div class="mini">
-            <b>Weight loss</b>
-            <p>GLP-1 options + nutrition coaching, with clinician oversight and safety checks.</p>
-          </div>
-          <div class="mini">
-            <b>Wellness support</b>
-            <p>Peptide-based wellness support may be discussed where appropriate to your goals.</p>
-          </div>
-        </div>
-
-        <div class="footer">
-          <b>What you’ll get in your free consult:</b><br>
-          • Goal review + timeline • Program options and pricing • Next steps + onboarding checklist
-        </div>
-      </div>
-
-    <div id="form" class="card pad">
-  <h2>You're One Step Away</h2>
-  <p class="tiny">
-    You've already scanned the QR code — tap below to complete your booking on our secure intake page.
-  </p>
-
-  <div class="ctaRow" style="margin-top:18px">
-    <a class="btn btn2" href="https://www.luxurymedicalgroup.com/#form">
-      Continue to Booking
-    </a>
-  </div>
-
-  <div class="footer">
-    Takes less than 30 seconds to complete.
-  </div>
 </div>
-    </div>
-  </div>
+
+
+<div class="quiz-step" data-step="2">
+
+<h2>Would you love to lose 5 lbs or drop a dress size?</h2>
+
+<div class="quiz-actions">
+<button class="quiz-btn" onclick="nextStep(3)">Yes</button>
+<button class="quiz-btn" onclick="nextStep(3)">Absolutely</button>
+</div>
+
+</div>
+
+
+<div class="quiz-step" data-step="3">
+
+<h2>Are you feeling too fatigued to fully enjoy planning your wedding?</h2>
+
+<div class="quiz-actions">
+<button class="quiz-btn" onclick="nextStep(4)">Yes</button>
+<button class="quiz-btn" onclick="nextStep(4)">Sometimes</button>
+</div>
+
+</div>
+
+
+<div class="quiz-step" data-step="4">
+
+<h2>Are you ready to feel good and look incredible for your big day?</h2>
+
+<div class="quiz-actions">
+<button class="quiz-btn" onclick="nextStep(5)">Yes</button>
+<button class="quiz-btn" onclick="nextStep(5)">I’m Ready</button>
+</div>
+
+</div>
+
+
+<div class="quiz-step quiz-result" data-step="5">
+
+<h2>You may be a great fit for a <span style="color:#f4cc3f">FREE CONSULT</span></h2>
+
+<p>
+Learn how Luxury Medical Group can help support your weight-loss,
+energy, and wellness goals before your wedding day.
+</p>
+
+<a class="btn large-cta" href="https://www.luxurymedicalgroup.com/#form">
+Click Here to Book Your Free Consult
+</a>
+
+<div class="tiny">
+Takes less than 30 seconds to book.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+
+<script>
+
+function nextStep(stepNumber){
+
+const steps=document.querySelectorAll('.quiz-step');
+
+steps.forEach(step=>{
+step.classList.remove('active');
+});
+
+document.querySelector('[data-step="'+stepNumber+'"]').classList.add('active');
+
+}
+
+</script>
+
+
 </body>
 </html>
